@@ -52,7 +52,7 @@ PyQtを使用していますので、クロスプラットフォームで使用�
 
 ### cmdを開く
 
-Win + rを押して`cmd`と打ち込みます。
+Win + rを押して`cmd`と打ち込みます。  
 ![imgs/img8](imgs/img8.png)
 
 ### python -Vを試す
