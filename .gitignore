@@ -1,1 +1,3 @@
 trip
+uifiles/*.py
+__pycache__
