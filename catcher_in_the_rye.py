@@ -15,17 +15,22 @@ class StartGUI(Ui_startup):
     def show_subwindow(self):
         self.teams_gui = TeamsGUI()
         dialog = QtWidgets.QDialog()
+        # dialog.setWindowFlags(QtCore.Qt.Window)
+        dialog.setWindowFlags(QtCore.Qt.WindowMaximizeButtonHint)
         self.teams_gui.setupUi(dialog)
+        self.teams_gui.setup(self)
         dialog.exec_()
         print("call exec")
 
 class TeamsGUI(Ui_teams):
-    def setup(self):
+    def setup(self, parent=None):
+        # self.setWindowFlags(0)
+        self.num = parent.spin_members.value()
         self.button_ok.clicked.connect(self.button_okClicked)
 
     def button_okClicked(self):
         print("clicked teamsGUI ok button. destroy")
-        del self
+        print(self.num)
 
 
 if __name__ == "__main__":
@@ -34,5 +39,6 @@ if __name__ == "__main__":
     ui = StartGUI()
     ui.setupUi(startup)
     ui.setup(startup)
+    # startup.showFullScreen()
     startup.show()
     sys.exit(app.exec_())

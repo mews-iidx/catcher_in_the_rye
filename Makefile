@@ -12,3 +12,7 @@ install-requirements:
 
 clean:
 	$(RM) $(PYUI)
+
+#TODO: delete
+run:
+	python.exe catcher_in_the_rye.py
