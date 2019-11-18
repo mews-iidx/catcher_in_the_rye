@@ -6,20 +6,969 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1920</width>
+    <height>1054</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>ワンフレーズで捕まえて</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>1891</width>
+      <height>1011</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>対決</string>
+     </attribute>
+     <widget class="QPushButton" name="vsButton_2">
+      <property name="geometry">
+       <rect>
+        <x>1540</x>
+        <y>680</y>
+        <width>131</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>NEXT</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="gridLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>860</y>
+        <width>1821</width>
+        <height>88</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="teamA_summary">
+         <property name="font">
+          <font>
+           <pointsize>30</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>TeamA : 0</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QLabel" name="teamD_summary">
+         <property name="font">
+          <font>
+           <pointsize>30</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>TeamD : 0</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="4">
+        <widget class="QLabel" name="teamE_summary">
+         <property name="font">
+          <font>
+           <pointsize>30</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>TeamE : 0</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="teamB_summary">
+         <property name="font">
+          <font>
+           <pointsize>30</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>TeamB : 0</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="teamC_summary">
+         <property name="font">
+          <font>
+           <pointsize>30</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>TeamC : 0</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="teamF_summary">
+         <property name="font">
+          <font>
+           <pointsize>30</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>TeamF : 0</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLabel" name="teamG_summary">
+         <property name="font">
+          <font>
+           <pointsize>30</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>TeamG : 0</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLabel" name="teamH_summary">
+         <property name="font">
+          <font>
+           <pointsize>30</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>TeamH : 0</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QLabel" name="teamI_summary">
+         <property name="font">
+          <font>
+           <pointsize>30</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>TeamI : 0</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="4">
+        <widget class="QLabel" name="teamF_summary_2">
+         <property name="font">
+          <font>
+           <pointsize>30</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>TeamJ: 0</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_29">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>730</y>
+        <width>281</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Team Survive</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_30">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>20</y>
+        <width>281</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>フレーズ</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="gridLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>510</y>
+        <width>1451</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="2" column="1">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLabel" name="label_31">
+         <property name="font">
+          <font>
+           <pointsize>30</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>VS</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QLineEdit" name="teamR_rep">
+         <property name="font">
+          <font>
+           <pointsize>30</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>あ</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="font">
+          <font>
+           <pointsize>30</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>TeamA 代表者</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QLabel" name="label_2">
+         <property name="font">
+          <font>
+           <pointsize>30</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>TeamA 代表者</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLineEdit" name="teamL_rep">
+         <property name="font">
+          <font>
+           <pointsize>30</pointsize>
+          </font>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0" colspan="4">
+        <widget class="Line" name="line">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QTextEdit" name="textEdit">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>60</y>
+        <width>1451</width>
+        <height>441</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>100</pointsize>
+       </font>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS UI Gothic'; font-size:100pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>チーム選択</string>
+     </attribute>
+     <widget class="QLineEdit" name="teama_point">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>40</y>
+        <width>141</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Skranji</family>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="teamA_list">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>120</y>
+        <width>321</width>
+        <height>331</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>40</y>
+        <width>161</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Skranji</family>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Team A</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="teamB_list">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>120</y>
+        <width>321</width>
+        <height>331</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="teamB_point">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>40</y>
+        <width>141</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Skranji</family>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>40</y>
+        <width>161</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Skranji</family>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Team B</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="teamC_list">
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>120</y>
+        <width>321</width>
+        <height>331</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="teamC_point">
+      <property name="geometry">
+       <rect>
+        <x>950</x>
+        <y>40</y>
+        <width>141</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Skranji</family>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>40</y>
+        <width>161</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Skranji</family>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Team C</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="teamD_list">
+      <property name="geometry">
+       <rect>
+        <x>1140</x>
+        <y>120</y>
+        <width>321</width>
+        <height>331</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="teamD_point">
+      <property name="geometry">
+       <rect>
+        <x>1320</x>
+        <y>40</y>
+        <width>141</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Skranji</family>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>1140</x>
+        <y>40</y>
+        <width>161</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Skranji</family>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Team D</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="teamE_list">
+      <property name="geometry">
+       <rect>
+        <x>1490</x>
+        <y>120</y>
+        <width>321</width>
+        <height>331</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="teamE_point">
+      <property name="geometry">
+       <rect>
+        <x>1670</x>
+        <y>40</y>
+        <width>141</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Skranji</family>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>1490</x>
+        <y>40</y>
+        <width>161</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Skranji</family>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Team E</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="teamG_point">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>470</y>
+        <width>141</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Skranji</family>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="teamJ_list">
+      <property name="geometry">
+       <rect>
+        <x>1480</x>
+        <y>550</y>
+        <width>321</width>
+        <height>331</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="teamH_point">
+      <property name="geometry">
+       <rect>
+        <x>940</x>
+        <y>470</y>
+        <width>141</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Skranji</family>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="teamI_">
+      <property name="geometry">
+       <rect>
+        <x>1130</x>
+        <y>470</y>
+        <width>161</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Skranji</family>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Team I</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="teamF_list">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>550</y>
+        <width>321</width>
+        <height>331</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>470</y>
+        <width>161</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Skranji</family>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Team G</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="teamI_list">
+      <property name="geometry">
+       <rect>
+        <x>1130</x>
+        <y>550</y>
+        <width>321</width>
+        <height>331</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_19">
+      <property name="geometry">
+       <rect>
+        <x>1480</x>
+        <y>470</y>
+        <width>161</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Skranji</family>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Team J</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="teamI_point">
+      <property name="geometry">
+       <rect>
+        <x>1310</x>
+        <y>470</y>
+        <width>141</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Skranji</family>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>470</y>
+        <width>161</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Skranji</family>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Team F</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_17">
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>470</y>
+        <width>161</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Skranji</family>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Team H</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="teamG_list">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>550</y>
+        <width>321</width>
+        <height>331</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="teamJ_point">
+      <property name="geometry">
+       <rect>
+        <x>1660</x>
+        <y>470</y>
+        <width>141</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Skranji</family>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="teamH_list">
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>550</y>
+        <width>321</width>
+        <height>331</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="TeamF_point">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>470</y>
+        <width>141</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Skranji</family>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="vsButton">
+      <property name="geometry">
+       <rect>
+        <x>1670</x>
+        <y>900</y>
+        <width>131</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>VS</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="startButton">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>910</y>
+        <width>131</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>START</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="shuffle_num">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>910</y>
+        <width>141</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Skranji</family>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>6</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_20">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>910</y>
+        <width>51</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Skranji</family>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>人</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_21">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>910</y>
+        <width>181</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Skranji</family>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>シャッフル</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>1920</width>
      <height>21</height>
     </rect>
    </property>

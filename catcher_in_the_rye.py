@@ -2,6 +2,7 @@ from uifiles.start import Ui_startup
 from uifiles.teams import Ui_teams
 from uifiles.main import Ui_MainWindow
 from PyQt5 import QtCore, QtGui, QtWidgets
+from modules import core
 import sys
 
 class StartGUI(Ui_startup):

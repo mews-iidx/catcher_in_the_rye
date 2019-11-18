@@ -15,4 +15,4 @@ clean:
 
 #TODO: delete
 run:
-	python.exe catcher_in_the_rye.py
+	python.exe game.py

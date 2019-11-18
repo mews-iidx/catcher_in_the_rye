@@ -13,7 +13,7 @@ import random
 #df2
 
 def csv2dict(csv_file="data/test_data.csv", ignore_header=True):
-    with open(csv_file, "r") as f:
+    with open(csv_file, "r", encoding="utf-8") as f:
         lines = f.readlines()
 
     member_dict = {}
@@ -29,7 +29,6 @@ def csv2dict(csv_file="data/test_data.csv", ignore_header=True):
     return member_dict
 
 def get_teams(members, num=4):
-    # members = random.shuffle(members)
     random.shuffle(members)
     d = len(members) // num
     s = len(members) % num
@@ -59,11 +58,9 @@ def get_teams(members, num=4):
 
 
 if __name__ == "__main__":
-    d = csv2dict()
+    d = csv2dict("data/test_data.csv")
     members = list(d.keys())
-    teams = get_teams(members, 4)
-
-
+    teams = get_teams(members, 6)
     for key in teams:
         print(key, teams[key])
         print("")
