@@ -231,20 +231,7 @@
        </rect>
       </property>
       <layout class="QGridLayout" name="gridLayout_2">
-       <item row="2" column="1">
-        <spacer name="verticalSpacer">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="1" column="2">
+       <item row="1" column="1" alignment="Qt::AlignHCenter">
         <widget class="QLabel" name="label_31">
          <property name="font">
           <font>
@@ -256,19 +243,14 @@
          </property>
         </widget>
        </item>
-       <item row="1" column="3">
-        <widget class="QLineEdit" name="teamR_rep">
-         <property name="font">
-          <font>
-           <pointsize>30</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>あ</string>
+       <item row="3" column="0" colspan="3">
+        <widget class="Line" name="line">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
          </property>
         </widget>
        </item>
-       <item row="0" column="0">
+       <item row="0" column="0" rowspan="3">
         <widget class="QLabel" name="label">
          <property name="font">
           <font>
@@ -276,11 +258,11 @@
           </font>
          </property>
          <property name="text">
-          <string>TeamA 代表者</string>
+          <string>TeamA</string>
          </property>
         </widget>
        </item>
-       <item row="0" column="3">
+       <item row="0" column="2" rowspan="3">
         <widget class="QLabel" name="label_2">
          <property name="font">
           <font>
@@ -288,23 +270,7 @@
           </font>
          </property>
          <property name="text">
-          <string>TeamA 代表者</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QLineEdit" name="teamL_rep">
-         <property name="font">
-          <font>
-           <pointsize>30</pointsize>
-          </font>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="0" colspan="4">
-        <widget class="Line" name="line">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
+          <string>TeamA</string>
          </property>
         </widget>
        </item>
