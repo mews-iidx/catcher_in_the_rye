@@ -16,8 +16,8 @@ class Main(Ui_MainWindow):
 
 
 
-        # self.textline_timer = QtCore.QTimer()
-        # self.timer.timeout.connect(self.set_textline)
+        self.textline_timer = QtCore.QTimer()
+        self.textline_timer.timeout.connect(self.set_textline)
 
         self.vsButton.clicked.connect(self.button_vs)
         self.nextButton.clicked.connect(self.button_next)
@@ -61,6 +61,7 @@ class Main(Ui_MainWindow):
     def check_win(self,  old,  text):
         if old == self.max_card_num:
             QtWidgets.QMessageBox.information(None,"Info", "WIN {}".format(text))
+            self.vsButton.setEnabled(True)
             self.back()
 
     def button_L(self):
@@ -81,37 +82,40 @@ class Main(Ui_MainWindow):
         self.check_win(old, self.labelR.text())
 
     def shuffle_init(self):
-        pass
-
-    def submit_team(self):
         clone_d = self.d.copy()
         l = []
         for a in clone_d:
             l.append(a)
         random.shuffle(l)
+        self.random_names = l
+
+    def submit_team(self):
         selected = self.selected_teams()
         enable_members = self.teams[selected[0]] + self.teams[selected[1]]
         for m in enable_members:
             del clone_d[m]
 
-        self.random_names = l
         print(clone_d)
 
     def button_next(self):
-        import time
+
         p = self.random_names.pop(0)
-        s = '\n'.join(self.d[p])
-        print(self.d)
+        textlines_text = '\n'.join(self.d[p])
+        self.text_iter = iter(textlines_text)
+        self.iter_all = ""
+
         del self.d[p]
-        #TODO TIMER
-        # all_text = ''
-        # for ss in s:
-        #     all_text += ss
-        #     self.textEdit.setText(all_text)
-        #     time.sleep(0.4)
+
+        timeout_time = (self.max_sec.value() * 1000) / len(textlines_text)
+        self.textline_timer.start(timeout_time)
 
 
-        self.textEdit.setText(s)
+    def set_textline(self):
+        try:
+            self.iter_all += self.text_iter.__next__()
+            self.textEdit.setText(self.iter_all)
+        except StopIteration as e:
+            self.textline_timer.stop()
 
 
     def selected_teams(self):
@@ -141,6 +145,7 @@ class Main(Ui_MainWindow):
             return selected
         else:
             ret = QtWidgets.QMessageBox.warning(None, "警告", "2チームだけ選択してください！！" )
+            return False
 
     def labelA_clicked(self, e):
         self.labelA_f = self.switch_label(self.labelA, self.labelA_f)
@@ -172,8 +177,10 @@ class Main(Ui_MainWindow):
             return False
 
     def button_vs(self):
+        self.max_card_num = int(self.spinBox.value())
         selected = self.selected_teams()
-        self.submit_team()
+        if not selected:
+            return
 
         if selected:
             self.tabWidget.setCurrentIndex(0)
@@ -183,8 +190,9 @@ class Main(Ui_MainWindow):
         self.pointL.setText(str(0))
         self.pointR.setText(str(0))
 
-        self.max_card_num = int(self.spinBox.value())
+        self.submit_team()
         self.label_reset()
+        self.vsButton.setDisabled(True)
 
     def button_shuffle(self):
 
