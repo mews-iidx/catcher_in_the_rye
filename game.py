@@ -1,11 +1,28 @@
 from uifiles.main import Ui_MainWindow
+from uifiles.winner import Ui_cong_dialog
 from PyQt5 import QtCore, QtGui, QtWidgets
 from modules import core
 import sys
 
 import random
 
+class Winner(Ui_cong_dialog):
+    def setup(self, dialog):
+        self.dialog = dialog
+        self.button_ok.clicked.connect(self.dialog.close)
+        # self.button_ok.clicked.connect(self.okClicked)
+        pass
+    # def okClicked
+    def show(self, text):
+        self.team_name.setText(text)
+        self.dialog.showFullScreen()
+        self.dialog.exec_()
+        pass
+
+
 class Main(Ui_MainWindow):
+
+
     def setup(self):
         self.d = core.csv2dict("data/test_data.csv")
         self.startButton.clicked.connect(self.button_shuffle)
@@ -13,8 +30,6 @@ class Main(Ui_MainWindow):
         self.timer.timeout.connect(self.shuffle)
         self.buttonL.clicked.connect(self.button_L)
         self.buttonR.clicked.connect(self.button_R)
-
-
 
         self.textline_timer = QtCore.QTimer()
         self.textline_timer.timeout.connect(self.set_textline)
@@ -60,9 +75,15 @@ class Main(Ui_MainWindow):
 
     def check_win(self,  old,  text):
         if old == self.max_card_num:
-            QtWidgets.QMessageBox.information(None,"Info", "WIN {}".format(text))
+            # QtWidgets.QMessageBox.information(None,"Info", "WIN {}".format(text))
+            dialog = QtWidgets.QDialog()
+            cong_dialog = Winner()
+            cong_dialog.setupUi(dialog)
+            cong_dialog.setup(dialog)
+            cong_dialog.show("Team " + text + "!!!")
             self.vsButton.setEnabled(True)
             self.back()
+
 
     def button_L(self):
         old = int(self.pointL.text())
@@ -74,6 +95,19 @@ class Main(Ui_MainWindow):
         self.tabWidget.setCurrentIndex(1)
         self.pointL.setText(str(0))
         self.pointR.setText(str(0))
+
+        self.d.update(self.tmp_members)
+        self.random_names += list(self.tmp_members.keys())
+        random.shuffle(self.random_names)
+
+        #debug
+        # print("残りめんば　{}人".format(len(self.random_names)))
+        # print("------------------------------------------------ ")
+        # for a in self.random_names:
+        #     print(a)
+        # print("------------------------------------------------ ")
+        # print("")
+
 
     def button_R(self):
         old = int(self.pointR.text())
@@ -90,16 +124,23 @@ class Main(Ui_MainWindow):
         self.random_names = l
 
     def submit_team(self):
+        self.tmp_members = {}
         selected = self.selected_teams()
+        #参加者たちを一時的に退避
         enable_members = self.teams[selected[0]] + self.teams[selected[1]]
         for m in enable_members:
-            del clone_d[m]
+            ret = self.d.get(m)
+            if ret:
+                self.tmp_members[m] = self.d[m]
+                del self.d[m]
+                del self.random_names[self.random_names.index(m)]
+                #TODO add end process. tmp_members back to self.d
 
-        print(clone_d)
 
     def button_next(self):
 
         p = self.random_names.pop(0)
+        print("答え: " + p)
         textlines_text = '\n'.join(self.d[p])
         self.text_iter = iter(textlines_text)
         self.iter_all = ""
@@ -199,10 +240,11 @@ class Main(Ui_MainWindow):
         if not self.is_start:
             self.is_start = True
             self.startButton.setText("STOP")
-            self.timer.start(300)
+            self.timer.start(self.shuffle_speed.value())
         else:
             self.is_start = False
-            self.startButton.setText("START")
+            # self.startButton.setText("START")
+            self.startButton.setDisabled(True)
             self.timer.stop()
             self.shuffle_init()
 
@@ -218,7 +260,7 @@ class Main(Ui_MainWindow):
         for key in teams:
             team_objects[team_map.index(key)].clear()
             for t in teams[key]:
-                print(key, t)
+                # print(key, t)
                 team_objects[team_map.index(key)].addItem(t)
         self.teams = teams
 
