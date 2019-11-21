@@ -3,3 +3,5 @@ uifiles/*.py
 __pycache__
 dist
 build
+game.spec
+read.xlsx
