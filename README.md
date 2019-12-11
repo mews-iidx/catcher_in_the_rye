@@ -52,6 +52,7 @@ PyQtを使用していますので、クロスプラットフォームで使用�
 ## 実行
 
 `main`を実行します
+
 | platform | name |
 | ------- | ------ |
 | Windows | main.exe |
