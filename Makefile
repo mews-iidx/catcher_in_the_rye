@@ -2,14 +2,14 @@ UIDIR:=uifiles
 UIFILES:=$(wildcard $(UIDIR)/*.ui)
 PYUI=$(patsubst %.ui,%.py,$(UIFILES))
 
-all: dist pyfiles
+all: dist/game.exe pyfiles
 release: dist.zip
 
 dist.zip: dist files
 	zip -r $@ $<
 
-dist: game.py dist/data dist/data/test_data.csv
-	pyinstaller game.py --onefile
+dist/game.exe: game.py dist/data dist/data/test_data.csv
+	pyinstaller.exe game.py --onefile
 
 dist/data:
 	mkdir -p $@
