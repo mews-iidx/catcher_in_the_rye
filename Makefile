@@ -9,7 +9,7 @@ dist.zip: dist files
 	zip -r $@ $<
 
 dist: game.py dist/data dist/data/test_data.csv
-	pyinstaller.exe game.py --onefile
+	pyinstaller game.py --onefile
 
 dist/data:
 	mkdir -p $@

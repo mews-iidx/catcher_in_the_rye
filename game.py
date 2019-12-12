@@ -379,6 +379,6 @@ if __name__ == "__main__":
     # control.setup(sub_dialog, ui)
     # control.show()
 
-    # MainWindow.show()
-    MainWindow.showFullScreen()
+    MainWindow.show()
+    #MainWindow.showFullScreen()
     sys.exit(app.exec_())

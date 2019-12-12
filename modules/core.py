@@ -23,10 +23,10 @@ def csv2dict(csv_file="data/test_data.csv", ignore_header=True):
 
         sp = l.split(",")
         name = sp[0]
-        cat1 = sp[2]
-        cat2 = sp[3]
-        cat3 = sp[4]
-        cat4 = sp[5]
+        cat1 = sp[1]
+        cat2 = sp[2]
+        cat3 = sp[3]
+        cat4 = sp[4]
         member_dict[name] = [cat1, cat2, cat3, cat4.rstrip()]
 
     return member_dict
