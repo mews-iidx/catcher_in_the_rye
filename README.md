@@ -21,7 +21,7 @@ PyQtを使用していますので、クロスプラットフォームで使用�
 
 ## releases
 
-以下リンクより、Windows向け実行ファイルをダウンロードできます。環境構築が不要でおすすめです！
+以下リンクより、Windows向け実行ファイルをダウンロードできます。環境構築が不要でおすすめです！  
 [Release](https://github.com/mews-iidx/catcher_in_the_rye/releases/download/v1.0/dist.zip)
 
 ## csv加工
